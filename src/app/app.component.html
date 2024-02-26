@@ -2,9 +2,11 @@
   <input type="text" #input> <!-- Local reference variable -->
   <button (click)="OnSubmit(input)">Submit</button>
   <!-- We add click event and when this click event happens we want to call a method on Submit  -->
-  <app-demo [value]="inputText"> <!-- app-demo is child component of this app.component -->
+  <app-demo [value]="inputText" *ngIf="destroy"> <!-- app-demo is child component of this app.component -->
   <h4>This is projected content {{ inputText }}</h4>
   </app-demo>
   <!-- Custome propery binding -->
+  <br><br>
+  <button (click)="DestroyComponent()">Destroy</button>
 </div>
 
